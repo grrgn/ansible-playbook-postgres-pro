@@ -28,9 +28,9 @@ gitlab_use_internal_gitaly: 'true'
 gitlab_git_data_dir: "/var/opt/gitlab/git-data"
 gitlab_gitaly_token: '8998'
 gitlab_secret_token: '8998'
-gitlab_gitaly_instance_ip: '192.168.1.21'
+gitlab_gitaly_instance_ip: '192.168.1.19'
 gitlab_gitaly_instance_port: '8075'
 gitlab_use_internal_postgresql: 'true'
-gitlab_postgresql_db_host: '192.168.1.21'
+gitlab_postgresql_db_host: '192.168.1.19'
 gitlab_postgresql_db_port: 5432
 gitlab_postgresql_db_password: '8998'
