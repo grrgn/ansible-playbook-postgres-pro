@@ -1,0 +1,104 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"PropertiesComponent\">{}</component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 3b90a863fa2e170f9f6c0dd21b4d8c08e8639d3f)
++++ b/.idea/workspace.xml	(date 1741727613469)
+@@ -1,4 +1,91 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="PropertiesComponent">{}</component>
++  <component name="AutoImportSettings">
++    <option name="autoReloadType" value="SELECTIVE" />
++  </component>
++  <component name="ChangeListManager">
++    <list default="true" id="8327d716-39be-4b20-b8a2-53965be5ad19" name="Changes" comment="" />
++    <option name="SHOW_DIALOG" value="false" />
++    <option name="HIGHLIGHT_CONFLICTS" value="true" />
++    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++    <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="Git.Settings">
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++  </component>
++  <component name="GitLabMergeRequestsSettings"><![CDATA[{
++  "editorReviewEnabled": false
++}]]></component>
++  <component name="GitlabMajeraCodeReviewSettings">
++    <option name="popularEmojiShortcuts">
++      <list />
++    </option>
++    <option name="pullRequestSearchScopePresentableStr" value="GitLab Cloud (My Work)" />
++    <option name="servers">
++      <list>
++        <DiscoveredCodeReviewServer>
++          <option name="serviceId" value="gitlab" />
++          <option name="storedCodeReviewRepositories">
++            <list>
++              <StoredCodeReviewRepository>
++                <option name="name" value="ansible-prod" />
++                <option name="workspace" value="grigoriy.nabiev" />
++              </StoredCodeReviewRepository>
++            </list>
++          </option>
++          <option name="url" value="https://gitlab.com" />
++        </DiscoveredCodeReviewServer>
++      </list>
++    </option>
++  </component>
++  <component name="ProjectColorInfo"><![CDATA[{
++  "associatedIndex": 3
++}]]></component>
++  <component name="ProjectId" id="2uBdK3lYxMoZPKsaWCT4pzZ9d0R" />
++  <component name="ProjectViewState">
++    <option name="hideEmptyMiddlePackages" value="true" />
++    <option name="showLibraryContents" value="true" />
++  </component>
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "OrchideMappingSettingsSimpleMapping.checked": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "last_opened_file_path": "/home/grrg/devops_practice/ansible/playbook",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "nodejs_package_manager_path": "npm",
++    "vue.rearranger.settings.migration": "true"
++  }
++}]]></component>
++  <component name="RecentsManager">
++    <key name="MoveFile.RECENT_KEYS">
++      <recent name="$PROJECT_DIR$/inventories/prod" />
++      <recent name="$PROJECT_DIR$/inventories" />
++    </key>
++  </component>
++  <component name="SharedIndexes">
++    <attachedChunks>
++      <set>
++        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-PY-243.22562.220" />
++        <option value="bundled-python-sdk-0fc6c617c4bd-9a18a617cbe4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.22562.220" />
++      </set>
++    </attachedChunks>
++  </component>
++  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
++  <component name="TaskManager">
++    <task active="true" id="Default" summary="Default task">
++      <changelist id="8327d716-39be-4b20-b8a2-53965be5ad19" name="Changes" comment="" />
++      <created>1741725833810</created>
++      <option name="number" value="Default" />
++      <option name="presentableId" value="Default" />
++      <updated>1741725833810</updated>
++      <workItem from="1741725834879" duration="1658000" />
++    </task>
++    <servers />
++  </component>
++  <component name="TypeScriptGeneratedFilesManager">
++    <option name="version" value="3" />
++  </component>
+ </project>
+\ No newline at end of file
