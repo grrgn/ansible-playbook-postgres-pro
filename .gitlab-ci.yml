@@ -3,10 +3,11 @@ stages:
   - playbook
 
 variables:
-  PLAYBOOK: "gitlab.yml"
+  PLAYBOOK: "deploy.yml"
   LIMIT: "all"
   EXTRAVARS: "empty=true"
   TAGS: "all"
+  INVENTORY: "./prod/hosts"
 
 .run-playbook:
   image:
@@ -33,9 +34,8 @@ ansible-linter:
   only:
     - merge_requests
 
-deploy:
+gitlab:
   stage: playbook
   except: .run-playbook
   variables:
-    PLAYBOOK: ""
-    LIMIT: "grrg"
+    PLAYBOOK: "gitlab.yml"
