@@ -1,0 +1,41 @@
+stages:
+  - lint
+  - playbook
+
+variables:
+  PLAYBOOK: "gitlab.yml"
+  LIMIT: "all"
+  EXTRAVARS: "empty=true"
+  TAGS: "all"
+
+.run-playbook:
+  image:
+    name:
+  before_script:
+    - export ANSIBLE_CONFIG=./ansible.cfg
+    - eval $(ssh-agent -s)
+    - echo "$SSH_KEY" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+  script:
+    - echo $PLAYBOOK
+    - ansible-playbook $PLAYBOOK -e $EXTRAVARS -t $TAGS -i $PLAYBOOK
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "web"'
+      when: manual
+
+ansible-linter:
+  stage: lint
+  image:
+    name:
+  script:
+    - ansible-lint
+  only:
+    - merge_requests
+
+deploy:
+  stage: playbook
+  except: .run-playbook
+  variables:
+    PLAYBOOK: ""
+    LIMIT: "grrg"
