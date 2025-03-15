@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8327d716-39be-4b20-b8a2-53965be5ad19" name="Changes" comment="" />
+    <list default="true" id="8327d716-39be-4b20-b8a2-53965be5ad19" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,9 +15,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitLabMergeRequestsSettings"><![CDATA[{
-  "editorReviewEnabled": false
-}]]></component>
+  <component name="GitLabMergeRequestsSettings">{
+  &quot;editorReviewEnabled&quot;: false
+}</component>
   <component name="GitlabMajeraCodeReviewSettings">
     <option name="popularEmojiShortcuts">
       <list />
@@ -29,6 +31,12 @@
             <list>
               <StoredCodeReviewRepository>
                 <option name="name" value="ansible-prod" />
+                <option name="storedVcsRemote">
+                  <StoredVcsRemote>
+                    <option name="vcsRemoteUrl" value="git@gitlab.com:grigoriy.nabiev/ansible-prod.git" />
+                    <option name="vcsRootUrl" value="file://$PROJECT_DIR$" />
+                  </StoredVcsRemote>
+                </option>
                 <option name="workspace" value="grigoriy.nabiev" />
               </StoredCodeReviewRepository>
             </list>
@@ -38,27 +46,29 @@
       </list>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2uBdK3lYxMoZPKsaWCT4pzZ9d0R" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "OrchideMappingSettingsSimpleMapping.checked": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/grrg/devops_practice/ansible/playbook",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;OrchideMappingSettingsSimpleMapping.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/grrg/devops_practice/ansible/roles/ansible-role-gitlab&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/inventories/prod" />
@@ -82,6 +92,8 @@
       <option name="presentableId" value="Default" />
       <updated>1741725833810</updated>
       <workItem from="1741725834879" duration="1658000" />
+      <workItem from="1742044004916" duration="1260000" />
+      <workItem from="1742063201160" duration="12000" />
     </task>
     <servers />
   </component>
