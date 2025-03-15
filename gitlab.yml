@@ -2,4 +2,4 @@
 - name: Install gitlab on host
   hosts: gitlab
   roles:
-    - ansible-role-gitlab
+    - gitlab
