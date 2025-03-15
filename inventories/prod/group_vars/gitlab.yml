@@ -1,7 +1,7 @@
-#gitlab_edition: "gitlab-сe"
+gitlab_edition: "gitlab-сe"
 #gitlab_version: "17.8.4"
 #gitlab_release: "ce.0"
-#gitlab_gpg_key_url: "https://packages.gitlab.com/gpg.key"
+gitlab_gpg_key_url: "https://packages.gitlab.com/gitlab/gitlab-ce/gpgkey"
 #gitlab_gpg_key_id: "F6403F6544A38863DAA0B6E03F01618A51312F3F"
 #gitlab_is_primary: false
 #gitlab_external_url: "http://localhost"
