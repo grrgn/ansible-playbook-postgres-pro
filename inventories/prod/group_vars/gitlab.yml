@@ -1,4 +1,4 @@
-gitlab_edition: "gitlab-сe"
+gitlab_edition: 'gitlab-сe'
 #gitlab_version: "17.8.4"
 #gitlab_release: "ce.0"
 #gitlab_gpg_key_url: "https://packages.gitlab.com/gitlab/gitlab-ce/gpgkey"
@@ -34,3 +34,14 @@ gitlab_use_internal_postgresql: 'true'
 gitlab_postgresql_db_host: '192.168.1.105'
 gitlab_postgresql_db_port: 5432
 gitlab_postgresql_db_password: '8998'
+
+#gitlab_dependencies:
+#  - "apt-transport-https"
+#  - "curl"
+#  - "gnupg"
+#  - "openssh-server"
+#  - "openssl"
+#  - "tzdata"
+#  - "debian-archive-keyring"
+#gitlab_gpg_key_url: "https://packages.gitlab.com/gitlab/gitlab-ce/gpgkey"
+#gitlab_package_url: "https://packages.gitlab.com/gitlab/gitlab-ce/ubuntu/"
