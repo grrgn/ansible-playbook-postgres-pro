@@ -1,5 +1,52 @@
----
-- name: Установка postgresql
+- name: Собрать загрузку с хостов
   hosts: all
-  roles:
-    - postgresql
+  gather_facts: true
+  vars:
+    postgresql_source_addr: "{{ groups['all'] | reject('equalto', ansible_all_ipv4_addresses[0]) | list | first }}/32"
+    postgresql_db_user: student
+    postgresql_db_user_password: password
+    postgresql_database: postgres
+  tasks:
+    - name: Set fact for CPU load
+      ansible.builtin.set_fact:
+        host_cpu_load: "{{ ansible_loadavg['1m'] | float }}"
+
+    - name: Find host with lowest CPU load
+      ansible.builtin.set_fact:
+        target_host: "{{ groups['all'] | map('extract', hostvars, 'host_cpu_load') | zip(groups['all']) | sort | first | last }}"
+      run_once: true
+
+    - name: Install PostgreSQL on host with lowest CPU load
+      ansible.builtin.include_role:
+        name: postgresql
+      when: inventory_hostname == target_host
+
+    - name: Flush handlers
+      ansible.builtin.meta: flush_handlers
+
+    - name: Make a query to database from another host
+      block:
+        - name: update apt cache
+          ansible.builtin.apt:
+            update_cache: true
+          when: ansible_pkg_mgr == "apt"
+
+        - name: update yum cache
+          ansible.builtin.yum:
+            update_cache: true
+          when: ansible_pkg_mgr == "yum" or ansible_pkg_mgr == "dnf"
+
+        - name: install python3 package for query
+          ansible.builtin.package:
+            name: "python3-psycopg2"
+            state: present
+
+        - name: Make a query to database
+          community.postgresql.postgresql_query:
+            db: "{{ postgresql_database }}"
+            login_host: "{{ groups['all'] | reject('equalto', ansible_all_ipv4_addresses[0]) | list | first }}"
+            login_user: "{{ postgresql_db_user }}"
+            login_password: "{{ postgresql_db_user_password }}"
+            query: SELECT 1
+      when: inventory_hostname != target_host
+
