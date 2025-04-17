@@ -1,5 +1,5 @@
 ---
 - name: Установка postgresql
-  hosts: db
+  hosts: all
   roles:
     - postgresql

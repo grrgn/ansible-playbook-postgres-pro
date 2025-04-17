@@ -1,4 +1,16 @@
-#roles:
+roles:
   - name: gitlab
     src: git+ssh://git@gitlab.com/grigoriy.nabiev/ansible-role-gitlab.git
     version: "v1.3.6"
+
+  - name: bind9
+    src: git+ssh://git@gitlab.com/grigoriy.nabiev/ansible-role-bind9.git
+    version: "v1.0.0"
+
+  - name: nginx
+    src: git+ssh://git@gitlab.com/grigoriy.nabiev/ansible-role-nginx.git
+    version: "v1.0.1"
+
+  - name: postgresql
+    src: git+ssh://git@gitlab.com/grigoriy.nabiev/ansible-role-postgresql.git
+    version: "v0.0.6"

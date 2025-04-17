@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8327d716-39be-4b20-b8a2-53965be5ad19" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/db.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dns.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventories/prod/group_vars/db.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventories/prod/group_vars/dns.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ansible.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/ansible.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventories/prod/hosts" beforeDir="false" afterPath="$PROJECT_DIR$/inventories/prod/hosts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.yml" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,6 +20,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitLabMergeRequestsSettings">{
@@ -61,8 +71,8 @@
     "OrchideMappingSettingsSimpleMapping.checked": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "dev",
-    "last_opened_file_path": "/home/grrg/devops_practice/ansible/prod/roles",
+    "git-widget-placeholder": "feature",
+    "last_opened_file_path": "/home/grrg/devops_practice/ansible/playbooks/ansible-role-postgresql",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -103,6 +113,13 @@
       <workItem from="1742063694332" duration="750000" />
       <workItem from="1742064593098" duration="8854000" />
       <workItem from="1742114420352" duration="3173000" />
+      <workItem from="1742119226008" duration="13496000" />
+      <workItem from="1744227567556" duration="982000" />
+      <workItem from="1744229164661" duration="556000" />
+      <workItem from="1744618183918" duration="19000" />
+      <workItem from="1744741370889" duration="6170000" />
+      <workItem from="1744780429729" duration="617000" />
+      <workItem from="1744796776469" duration="1441000" />
     </task>
     <servers />
   </component>
