@@ -33,7 +33,7 @@ cd ansible-playbook-postgres-pro
 ```bash
 ansible-galaxy install -r requirements.yml
 ```
-3. Запустите playbook с нужными ip-адресами через запятую, запятая в конце обязательна. Так же можно переопределить переменные c ключом -e.
+3. Запустите playbook с нужными ip-адресами через запятую. Так же можно переопределить переменные c ключом -e.
 Переменные, которые можно переопределить:
 ```
 pg_db_user: 
@@ -43,9 +43,9 @@ pg_listen_addresses:
 pg_database: 
 pg_version:
 ```
-Запускаем playbook.yml
+Запуск playbook.yml
 ```bash
-ansible-playbook playbook.yml -i host1,host2,
+ansible-playbook playbook.yml -i host1,host2
 ```
 ## Структура проекта
 - roles/postgresql/ - роль для установки и настройки PostgreSQL
@@ -66,48 +66,47 @@ ansible-playbook playbook.yml -i host1,host2,
 4. Тестирование
 Использован molecule с драйвером Docker. Созданы Dockerfile для образов Debian 12 и AlmaLinux 9 с поддержкой systemd.
 
+5. Ограничения
+Данный playbook будет работать только с двумя хостами, для того чтобы он мог работать с любым количеством хостов, нужно явно указать хосты в inventory файле и немного доработать переменные playbook.
+
 ## Примеры
-- Запускаем два хоста: Debian 12 и AlmaLinux 9
-- Запускаем нагрузку на одном из хостов для проверки playbook (debian)
+# Запускаем два хоста: Debian 12 и AlmaLinux 9
+
+- Запускаем нагрузку на одном из хостов для проверки playbook (AlmaLinux)
 ```bash
 dd if=/dev/zero of=/dev/null bs=1M &
 ```
-скрин
+![Загрузка](https://i.imgur.com/jy2blQ6.png)
 
 - Запускаем playbook
 ```bash
-ansible-playbook playbook.yml -i 192.168.1.201, 192.168.1.202,
+ansible-playbook playbook.yml -i 192.168.1.201, 192.168.1.202
 ```
-скрин
+![Запуск](https://i.imgur.com/pxCBaqh.png)
 
 - Проверяем наличие PostgreSQL на хосте
 ```bash
-команда
+sudo systemctl status postgresql-17.service
 ```
-скрин
-- Проверяем возможность подключения с другого хоста
-```bash
-команда
-```
-скрин
-- Проверяем то же самое на другом хосте (alma)
+![Статус](https://i.imgur.com/VrR3sok.png)
+
+- Делаем то же самое на другом хосте (Debian)
 ```bash
 dd if=/dev/zero of=/dev/null bs=1M &
 ```
-скрин
+![Загрузка](https://i.imgur.com/nIqegM1.png)
 
 - Запускаем playbook
 ```bash
-ansible-playbook playbook.yml -i 192.168.1.201, 192.168.1.202,
+ansible-playbook playbook.yml -i 192.168.1.201, 192.168.1.202
 ```
-скрин
+![Запуск](https://i.imgur.com/OVoysqX.png)
 
 - Проверяем наличие PostgreSQL на хосте
 ```bash
-команда
+sudo systemctl status postgresql@17-main.service
 ```
-скрин
-- Проверяем возможность подключения с другого хоста
-```bash
-команда
-```
+![Статус](https://i.imgur.com/W1dNeTf.png)
+
+- Выполнение запроса к БД с другого хоста
+![Запрос](https://i.imgur.com/lBr0EJ2.png)
