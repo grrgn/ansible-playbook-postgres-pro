@@ -6,6 +6,7 @@
     # Выбираем ip адрес второго хоста для приема подключений
     postgresql_source_addr: "{{ groups['all'] | reject('equalto', ansible_all_ipv4_addresses[0]) | list | first }}/32"
     postgresql_db_user: student
+    # антипаттерн, переменная пароля должна быть в переменной окружения или anisble vault, но так было сделано для упрощения
     postgresql_db_user_password: password
     postgresql_database: postgres
   tasks:
