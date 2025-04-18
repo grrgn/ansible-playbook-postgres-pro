@@ -1,4 +1,4 @@
 roles:
   - name: postgresql
-    src: git+ssh://git@gitlab.com/grigoriy.nabiev/ansible-role-postgresql.git
+    src: git+https://github.com/grrgn/ansible-role-postgresql.git
     version: "v1.0.0"
