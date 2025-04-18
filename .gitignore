@@ -1,3 +1,5 @@
 roles/*
 ansible.log
 .idea
+.vscode
+.ansible
