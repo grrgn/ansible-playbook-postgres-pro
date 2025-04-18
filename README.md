@@ -25,20 +25,28 @@
 1. Клонируйте репозиторий:
 
 ```bash
-git clone <ссылка-на-репозиторий>
-cd <папка-с-плейбуком>
+git clone https://github.com/grrgn/ansible-playbook-postgres-pro
+cd ansible-playbook-postgres-pro
 ```
 2. Установите роль
 
 ```bash
 ansible-galaxy install -r requirements.yml
 ```
-3. Запустите playbook с нужными ip-адресами через запятую, запятая в конце обязательна
-
+3. Запустите playbook с нужными ip-адресами через запятую, запятая в конце обязательна. Так же можно переопределить переменные c ключом -e.
+Переменные, которые можно переопределить:
+```
+pg_db_user: 
+pg_db_user_password: 
+pg_source_addr: 
+pg_listen_addresses: 
+pg_database: 
+pg_version:
+```
+Запускаем playbook.yml
 ```bash
 ansible-playbook playbook.yml -i host1,host2,
 ```
-
 ## Структура проекта
 - roles/postgresql/ - роль для установки и настройки PostgreSQL
 - playbook.yml - основной playbook для выбора хоста для установки и выполнения запроса
@@ -57,3 +65,49 @@ ansible-playbook playbook.yml -i host1,host2,
 
 4. Тестирование
 Использован molecule с драйвером Docker. Созданы Dockerfile для образов Debian 12 и AlmaLinux 9 с поддержкой systemd.
+
+## Примеры
+- Запускаем два хоста: Debian 12 и AlmaLinux 9
+- Запускаем нагрузку на одном из хостов для проверки playbook (debian)
+```bash
+dd if=/dev/zero of=/dev/null bs=1M &
+```
+скрин
+
+- Запускаем playbook
+```bash
+ansible-playbook playbook.yml -i 192.168.1.201, 192.168.1.202,
+```
+скрин
+
+- Проверяем наличие PostgreSQL на хосте
+```bash
+команда
+```
+скрин
+- Проверяем возможность подключения с другого хоста
+```bash
+команда
+```
+скрин
+- Проверяем то же самое на другом хосте (alma)
+```bash
+dd if=/dev/zero of=/dev/null bs=1M &
+```
+скрин
+
+- Запускаем playbook
+```bash
+ansible-playbook playbook.yml -i 192.168.1.201, 192.168.1.202,
+```
+скрин
+
+- Проверяем наличие PostgreSQL на хосте
+```bash
+команда
+```
+скрин
+- Проверяем возможность подключения с другого хоста
+```bash
+команда
+```
